@@ -1,0 +1,3 @@
+Title,Description,BiocVersion,Genome,SourceType,SourceUrl,Species,TaxonomyId,Coordinate_1_based,DataProvider,Maintainer,RDataClass,DispatchClass,RDataPath,Tags
+eoPredModel,Pre-trained eoPred model,3.16.0,hg19,RDS,TBD,Homo sapiens,NA,NA,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,mixo_splsda,Rds,eoPredData/eoPredModel.rds,DNA methylation
+x_test,Example test data,3.16.0,hg19,RDS,TBD,Homo sapiens,NA,NA,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,matrix,Rds,eoPredData/x_test.rds,DNA methylation
