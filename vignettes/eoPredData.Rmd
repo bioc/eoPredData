@@ -1,0 +1,108 @@
+---
+title: "Accessing preeclampsia DNAm models with eoPredData"
+author:
+- name: Iciar Boyano
+  affiliation: University of British Columbia
+  email: Iciar.Fernandez@bcchr.ca
+- name: Victor Yuan
+  affiliation: University of British Columbia
+package: eoPredData
+output:
+  BiocStyle::html_document:
+    self_contained: yes
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    code_folding: show
+abstract: |
+  Access pre-trained preeclampsia models from eoPredData + ExperimentHub
+date: "`r doc_date()`"
+vignette: |
+  %\VignetteIndexEntry{eoPredData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r vignetteSetup, echo=FALSE, message=FALSE, warning = FALSE}
+## Track time spent on making the vignette
+startTime <- Sys.time()
+## Bib setup
+library(RefManageR)
+bib <- c(eoPredData = citation("eoPredData")[1])
+```
+
+# How to access eoPredData with Bioconductor
+
+## Citing `eoPredData`
+
+We hope that `r Biocpkg("eoPredData")` will be useful for your research. Please 
+use the following information to cite the package and the overall approach. 
+Thank you!
+
+```{r "citation"}
+## Citation info
+citation("eoPredData")
+```
+
+# Quick start to using to `eoPredData`
+
+Install the R packages minfi and ExperimentHub:
+
+```{r, eval = FALSE}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+Biocmanager::install("ExperimentHub")
+BiocManager::install("mixOmics")
+```
+
+There are 2 objects associated with eoPredData:
+
+**EH####** - Pre-trained model object using `mixOmics`. Described in 
+`r Citep(bib[["eoPredData"]])`.
+
+**EH####** - DNA methylation test data, demonstrates prediction. `matrix`.
+
+```{r "start", message=FALSE, eval=FALSE}
+library(ExperimentHub)
+eh <- ExperimentHub()
+query(eh, "eoPredData")
+
+library(mixOmics)
+# model object
+eoPredModel <- eh[['EH####']] 
+# Test object
+x_test <- eh[['EH####']]
+# code to predict on x_test
+predictions <- predict(x_test, eoPredModel, dist = "max.dist")
+```
+
+# Reproducibility
+
+Date the vignette was generated.
+
+```{r reproduce1, echo=FALSE}
+## Date the vignette was generated
+Sys.time()
+```
+
+Wallclock time spent generating the vignette.
+
+```{r reproduce2, echo=FALSE}
+## Processing time in seconds
+totalTime <- diff(c(startTime, Sys.time()))
+round(totalTime, digits = 3)
+```
+
+`R` session information.
+
+```{r reproduce3, echo=FALSE}
+## Session info
+sessionInfo()
+```
+
+# Bibliography
+
+```{r vignetteBiblio, results="asis", echo=FALSE, warning=FALSE, message=FALSE}
+RefManageR::PrintBibliography(
+    bib, .opts = list(hyperlink = "to.doc", style = "html"))
+```
