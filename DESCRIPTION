@@ -1,20 +1,30 @@
 Package: eoPredData
 Title: ExperimentHub package for eoPred
-Version: 0.0.0.9000
+Version: 0.99.1
+Date: 2023-04-01
 Authors@R: c(
-    person("Iciar", "Boyano", , "Iciar.Fernandez@bcchr.ca", role = c("aut", "cre")),
+    person("Iciar", "Boyano", , "Iciar.Fernandez@bcchr.ca", 
+        role = c("aut", "cre")),
     person("Victor", "Yuan", , "victor.2wy@gmail.com", role = "aut")
     )
 Description: Provides access to eoPred pretrained model hosted on ExperimentHub.
+    Model was trained on placental DNA methylation preeclampsia samples using
+    mixOmics splsda. There are two resources: 1. the model object, and 2. a
+    testing data set used to demonstrate the function.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 URL: https://github.com/wvictor14/eoPredData
 BugReports: https://github.com/wvictor14/eoPredData/issues
-biocViews: ExperimentData, ExperimentHub, GEO, Genome, Tissue, 
+biocViews: ExperimentData, ExperimentHub, GEO, Tissue, 
     MethylationArrayData, Homo_sapiens_Data
-Imports: 
+Suggests:
     BiocStyle,
+    knitr,
+    rmarkdown,
+    RefManageR,
+    planet,
     mixOmics,
-    planet
+    ExperimentHub
+VignetteBuilder: knitr
