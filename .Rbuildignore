@@ -1,3 +1,5 @@
 ^eoPred\.Rproj$
 ^\.Rproj\.user$
-*.Rproj
+^LICENSE\.md$
+^data-raw$
+^eoPredData\.Rproj$
