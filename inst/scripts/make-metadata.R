@@ -2,7 +2,7 @@ library(dplyr)
 metadata <- tibble(
     Title = c('eoPredModel', 'x_test'),
     Description = c('Pre-trained eoPred model', 'Example test data'),
-    BiocVersion = '3.16.0',
+    BiocVersion = '3.17.0',
     Genome = 'hg19',
     SourceType = 'RDS',
     SourceUrl = 'https://github.com/wvictor14/planet',
