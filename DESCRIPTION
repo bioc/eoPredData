@@ -1,6 +1,6 @@
 Package: eoPredData
 Title: ExperimentHub package for eoPred
-Version: 0.99.1
+Version: 0.99.1.9000
 Date: 2023-04-01
 Authors@R: c(
     person("Iciar", "Boyano", , "Iciar.Fernandez@bcchr.ca", 
