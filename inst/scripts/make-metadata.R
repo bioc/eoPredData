@@ -1,8 +1,13 @@
 library(dplyr)
+library(readr)
+library(here)
 metadata <- tibble(
-    Title = c('eoPredModel', 'x_test'),
-    Description = c('Pre-trained eoPred model', 'Example test data'),
-    BiocVersion = '3.17.0',
+    Title = c('eoPredModel', 'valBMIQ', 'valMeta'),
+    Description = c(
+        'Pre-trained eoPred model',
+        'Example test data - BMIQ normalized betas matrix',
+        'Example test data - Sample metadata'),
+    BiocVersion = '3.17',
     Genome = 'hg19',
     SourceType = 'RDS',
     SourceUrl = 'https://github.com/wvictor14/planet',
@@ -12,9 +17,9 @@ metadata <- tibble(
     Coordinate_1_based = TRUE,
     DataProvider = 'University of British Columbia',
     Maintainer = 'Iciar Fernandez <Iciar.Fernandez@bcchr.ca>',
-    RDataClass = c('mixo_splsda', 'matrix'),
+    RDataClass = c('mixo_splsda', 'matrix', 'data.frame'),
     DispatchClass = 'Rds',
-    RDataPath = c('eoPredData/eoPredModel.rds', 'eoPredData/x_test.rds'),
+    RDataPath = c('eoPredData/eoPredModel.rds', 'eoPredData/valBMIQ.rds', 'eoPredData/valMeta.rds'),
     Tags = c('DNA methylation')
 )
 metadata %>% readr::write_csv(here::here('inst', 'extdata', 'metadata.csv'))
