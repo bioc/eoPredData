@@ -23,3 +23,6 @@ metadata <- tibble(
     Tags = c('DNA methylation')
 )
 metadata %>% readr::write_csv(here::here('inst', 'extdata', 'metadata.csv'))
+
+readr::read_csv(here::here('inst', 'extdata', 'metadata.csv')) %>%
+    View
