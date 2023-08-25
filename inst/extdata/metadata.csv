@@ -1,3 +1,4 @@
 Title,Description,BiocVersion,Genome,SourceType,SourceUrl,SourceVersion,Species,TaxonomyId,Coordinate_1_based,DataProvider,Maintainer,RDataClass,DispatchClass,RDataPath,Tags
 eoPredModel,Pre-trained eoPred model,3.17,hg19,RDS,https://github.com/wvictor14/planet,v1.0.0,Homo sapiens,NA,TRUE,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,mixo_splsda,Rds,eoPredData/eoPredModel.rds,DNA methylation
-x_test,Example test data,3.17,hg19,RDS,https://github.com/wvictor14/planet,v1.0.0,Homo sapiens,NA,TRUE,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,matrix,Rds,eoPredData/x_test.rds,DNA methylation
+valBMIQ,Example test data - BMIQ normalized betas matrix,3.17,hg19,RDS,https://github.com/wvictor14/planet,v1.0.0,Homo sapiens,NA,TRUE,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,matrix,Rds,eoPredData/valBMIQ.rds,DNA methylation
+valMeta,Example test data - Sample metadata,3.17,hg19,RDS,https://github.com/wvictor14/planet,v1.0.0,Homo sapiens,NA,TRUE,University of British Columbia,Iciar Fernandez <Iciar.Fernandez@bcchr.ca>,data.frame,Rds,eoPredData/valMeta.rds,DNA methylation
