@@ -7,7 +7,7 @@ metadata <- tibble(
         'Pre-trained eoPred model',
         'Example test data - BMIQ normalized betas matrix',
         'Example test data - Sample metadata'),
-    BiocVersion = '3.17',
+    BiocVersion = '3.18',
     Genome = 'hg19',
     SourceType = 'RDS',
     SourceUrl = 'https://github.com/wvictor14/planet',
