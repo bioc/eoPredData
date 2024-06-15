@@ -17,11 +17,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Iciar Boyano \email{Iciar.Fernandez@bcchr.ca}
+\strong{Maintainer}: Victor Yuan \email{victor.2wy@gmail.com}
 
 Authors:
 \itemize{
-  \item Victor Yuan \email{victor.2wy@gmail.com}
+  \item Iciar Boyano \email{Iciar.Fernandez@bcchr.ca}
 }
 
 }
