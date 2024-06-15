@@ -51,7 +51,7 @@ Install the R packages minfi and ExperimentHub:
 ```{r, eval = FALSE}
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-Biocmanager::install("ExperimentHub")
+BiocManager::install("ExperimentHub")
 BiocManager::install("mixOmics")
 ```
 
@@ -69,9 +69,9 @@ query(eh, "eoPredData")
 
 library(mixOmics)
 # model object
-eoPredModel <- eh[['EH####']] 
+eoPredModel <- eh[['EH8090']] 
 # Test object
-x_test <- eh[['EH####']]
+x_test <- eh[['EH8403']]
 # code to predict on x_test
 predictions <- predict(x_test, eoPredModel, dist = "max.dist")
 ```
