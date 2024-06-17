@@ -1,9 +1,9 @@
 ---
 title: "Accessing preeclampsia DNAm models with eoPredData"
 author:
-- name: Iciar Boyano
+- name: Iciar Fernandez Boyano
   affiliation: University of British Columbia
-  email: Iciar.Fernandez@bcchr.ca
+  email: iciarfernandez@outlook.com
 - name: Victor Yuan
   affiliation: University of British Columbia
 package: eoPredData
@@ -70,10 +70,13 @@ query(eh, "eoPredData")
 library(mixOmics)
 # model object
 eoPredModel <- eh[['EH8090']] 
-# Test object
+# test object
 x_test <- eh[['EH8403']]
+dim(x_test) # 452,453 by 49
+x_test <- x_test[rownames(x_test) %in% colnames(eoPredModel$X),] 
+dim(x_test) # 341,281 by 49
 # code to predict on x_test
-predictions <- predict(x_test, eoPredModel, dist = "max.dist")
+predictions <- predict(eoPredModel, t(x_test), dist = "max.dist")
 ```
 
 # Reproducibility

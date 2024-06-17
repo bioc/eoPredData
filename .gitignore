@@ -2,3 +2,4 @@
 *.Rproj
 *.Rds
 data-raw/valMeta.csv
+.DS_Store
