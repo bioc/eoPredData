@@ -6,6 +6,7 @@ author:
   email: iciarfernandez@outlook.com
 - name: Victor Yuan
   affiliation: University of British Columbia
+  email: victor.2wy@gmail.com
 package: eoPredData
 output:
   BiocStyle::html_document:
@@ -55,10 +56,10 @@ BiocManager::install("mixOmics")
 
 There are 2 objects associated with eoPredData:
 
-**EH####** - Pre-trained model object using `mixOmics`. Training and validation are described in 
+**EHEH8090** Pre-trained model object using `mixOmics`. Training and validation are described in 
 `r Citep(bib[["eoPredData"]])`.
 
-**EH####** - DNA methylation test data, use to demonstrate prediction of preeclampsia status using eoPred model. A `matrix`.
+**EHEH8403** DNA methylation test data, use to demonstrate prediction of preeclampsia status using eoPred model. A `matrix`.
 
 ```{r "start", message=FALSE, eval=FALSE}
 library(ExperimentHub)
