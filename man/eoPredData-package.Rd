@@ -4,7 +4,7 @@
 \name{eoPredData-package}
 \alias{eoPredData}
 \alias{eoPredData-package}
-\title{eoPredData: ExperimentHub package containing model data for predicting preeclampsia status for based on plcaental DNA methylation profile.}
+\title{eoPredData: ExperimentHub package containing model data for predicting preeclampsia status for based on plcaental DNA methylation profile}
 \description{
 Provides access to eoPred pretrained model hosted on ExperimentHub. Model was trained on placental DNA methylation preeclampsia samples using mixOmics splsda. There are two resources: 1. the model object, and 2. a testing data set used to demonstrate the function.
 }
