@@ -6,6 +6,7 @@ author:
   email: iciarfernandez@outlook.com
 - name: Victor Yuan
   affiliation: University of British Columbia
+  email: victor.2wy@gmail.com
 package: eoPredData
 output:
   BiocStyle::html_document:
@@ -24,8 +25,6 @@ vignette: |
 ---
 
 ```{r vignetteSetup, echo=FALSE, message=FALSE, warning = FALSE}
-## Track time spent on making the vignette
-startTime <- Sys.time()
 ## Bib setup
 library(RefManageR)
 bib <- c(eoPredData = citation("eoPredData")[1])
@@ -46,7 +45,7 @@ citation("eoPredData")
 
 # Quick start to using to `eoPredData`
 
-Install the R packages minfi and ExperimentHub:
+Install the R packages ExperimentHub:
 
 ```{r, eval = FALSE}
 if (!require("BiocManager", quietly = TRUE))
@@ -57,10 +56,10 @@ BiocManager::install("mixOmics")
 
 There are 2 objects associated with eoPredData:
 
-**EH####** - Pre-trained model object using `mixOmics`. Described in 
+**EHEH8090** Pre-trained model object using `mixOmics`. This model object can be used to create predictions on DNA methylation profiles collected from placental samples. Details on training and validation are described in 
 `r Citep(bib[["eoPredData"]])`.
 
-**EH####** - DNA methylation test data, demonstrates prediction. `matrix`.
+**EHEH8403** Placental DNA methylation test data (49 samples, 452 453 CpGs), used to demonstrate prediction of preeclampsia status using eoPred model. A `matrix` [cpg x sample].
 
 ```{r "start", message=FALSE, eval=FALSE}
 library(ExperimentHub)
@@ -80,21 +79,6 @@ predictions <- predict(eoPredModel, t(x_test), dist = "max.dist")
 ```
 
 # Reproducibility
-
-Date the vignette was generated.
-
-```{r reproduce1, echo=FALSE}
-## Date the vignette was generated
-Sys.time()
-```
-
-Wallclock time spent generating the vignette.
-
-```{r reproduce2, echo=FALSE}
-## Processing time in seconds
-totalTime <- diff(c(startTime, Sys.time()))
-round(totalTime, digits = 3)
-```
 
 `R` session information.
 
