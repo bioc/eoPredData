@@ -23,9 +23,8 @@ Suggests:
     knitr,
     rmarkdown,
     RefManageR,
-    planet
+    planet,
+    mixOmics
 VignetteBuilder: knitr
 Depends: 
     ExperimentHub
-Imports: 
-    planet
