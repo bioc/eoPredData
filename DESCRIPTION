@@ -22,10 +22,10 @@ Suggests:
     BiocStyle,
     knitr,
     rmarkdown,
-    RefManageR
+    RefManageR,
+    planet
 VignetteBuilder: knitr
 Depends: 
     ExperimentHub
 Imports: 
-    mixOmics,
     planet
