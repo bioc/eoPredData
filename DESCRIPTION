@@ -1,6 +1,6 @@
 Package: eoPredData
 Title: ExperimentHub package containing model data for predicting preeclampsia status for based on plcaental DNA methylation profile 
-Version: 0.99.10
+Version: 0.99.11
 Date: 2023-04-01
 Authors@R: c(
     person("Iciar", "Boyano", , "Iciar.Fernandez@bcchr.ca", role = c("aut")),
